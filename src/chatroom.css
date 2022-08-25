@@ -63,14 +63,13 @@
     height: 430px;
     width: 100%;
     background: white;
-    
 }
 
 .admin-welcome {
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 80% 20%;
     color: black;
-    max-width: 80%;
+    max-width: 95%;
     width: max-content;
     margin-left: 5%;
     margin-bottom: 20px;
@@ -108,7 +107,7 @@
     align-items: center;
     justify-content: flex-end;
     color: black;
-    width: 80%;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -116,7 +115,7 @@
     margin: 0;
     font-weight: bold;
     font-size: 18px;
-    width: 30%;
+    width: 40%;
     padding: 20px;
     word-break:normal !important;
     display: flex;
@@ -133,7 +132,7 @@
     font-weight: 500;
     padding: 20px;
     line-height: 27px;
-    max-width: 70%;
+    max-width: 60%;
     width: max-content;
     font-size: 20px;
 }
@@ -272,7 +271,7 @@ form button {
         padding: 10px 0;
     }
     .admin-welcome {
-        grid-template-columns: 80% 20%;
+        grid-template-columns: 70% 30%;
         margin-left: 10px;
     }
     .admin-welcome div {
@@ -289,12 +288,12 @@ form button {
         width: 100%;
     }
     .reply p {
-        width: 30%;
+        width: 40%;
         padding: 10px;
         font-size: 12px;
     }
     .reply div {
-        max-width: 70%;
+        max-width: 60%;
         margin-right: 10px;
         padding: 10px;
         font-size: 13px;
