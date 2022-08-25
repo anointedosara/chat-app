@@ -1,12 +1,15 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 function Login() {
-
     const [name, setName] = useState('')
     const [room, setRoom] = useState('')
+    const history = useHistory()
 
-    
+    const handleSubmit = (e) => {
+      e.preventDefault()
+      room.trim() && name.trim() && history.push(`/chatroom/${room}/${name}`)
+    }
 
   return (
     <div className='input-wrapper'>
@@ -14,11 +17,11 @@ function Login() {
         <div>
             <h1>Join</h1>
         </div>
-        <div className='input'>
+        <form className='form' onSubmit={handleSubmit}>
           <input type="text" value={name} onChange={e => setName(e.target.value)} placeholder='Name' />
           <input type="text" value={room} onChange={e => setRoom(e.target.value)} placeholder='Room' />
-          <Link to={room && name !== '' ? `/chatroom/${room}/${name}` : ""}><button>SIGN IN</button></Link>
-        </div>
+          <button type='submit'>SIGN IN</button>
+        </form>
       </div>
     </div>
   )
